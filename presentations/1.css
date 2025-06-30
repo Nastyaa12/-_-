@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F2EDDC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.presentation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-screen {
+    border: 8px solid #F29C50;
+    border-radius: 15px;
+    height: 60vh;
+    background-color: white;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.presentation-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.presentation-title {
+    font-size: 32px;
+    color: #A2A63F;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.presentation-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #F29C50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+    background-color: #e08c40;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    .presentation-screen {
+        height: 50vh;
+        border-width: 5px;
+    }
+    
+    .presentation-title {
+        font-size: 26px;
+    }
+    
+    .presentation-description {
+        font-size: 16px;
+    }
+    
+    .back-button {
+        width: 180px;
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
